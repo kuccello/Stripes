@@ -1,0 +1,30 @@
+<stripes pid="" xmlns="http://www.soldierofcode.com/stripes">
+
+  <site pid="developer.openapps.com"
+        name="OPENapps Developer Documentation Site"
+        title="OPENapps Dev">
+
+    <page id="urisafe-page-id/with/possible/slash/seperators"
+          state="draft|published|hidden|deleted"
+          date-created="">
+
+      <page-version id="version number"
+                    date-created=""
+                    who-created="pid of member who created this version"
+                    name="The name of the page as it will appear in the admin"
+                    title="The page title"
+                    state="draft|published|hidden|deleted|locked"
+                    content="maruku-markdown|html|text|ruby|stripes|haml|sass|css|js"><![CDATA[PAGE CONTENT HERE]]></page-version>
+    </page>
+  </site>
+
+  <member pid="email@example.com"
+          name="duh"
+          md5-password="">
+
+    <access id="editor|admin">
+      <site pid=""/>
+    </access>
+  </member>
+
+</stripes>

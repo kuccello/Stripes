@@ -1,0 +1,16 @@
+Stripes is built for ruby 1.9.1
+
+System Setup Requirements
+=====================================
+Ruby 1.9.1p243+
+RubyGems 1.3.5+
+TokyoCabinet 1.4.33+
+TokyoCabinet Ruby 1.29+
+Libxml2
+
+Required Gems:
+======================
+sudo gem install sinatra
+sudo gem install hutch-xamplr hutch-xamplr-pp
+sudo gem install haml
+sudo gem install maxjustus-sinatra-authentication
