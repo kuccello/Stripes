@@ -1,5 +1,17 @@
 #content
   %h1
     Welcome to the one time setup!
-  %a{:href=>"/onetimesetup/finish"}
-    Finish Setup
+  %form{:method=>"post",:action=>"/onetimesetup/admin"}
+    %h2
+      Administrator Details:
+    %ul
+      %li
+        %label{:for=>"email"}
+          email:
+        %input{:type=>"text",:name=>"email"}
+      %li
+        %label{:for=>"pass"}
+          password:
+        %input{:type=>"password",:name=>"pass"}
+      %li
+        %input{:type=>"submit",:value=>"next"}

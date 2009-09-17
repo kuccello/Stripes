@@ -8,7 +8,9 @@ get '/onetimesetup' do
   haml :'onetimesetup/first-step', :layout=>:'onetimesetup/layout'
 end
 
-get '/onetimesetup/admin' do
+post '/onetimesetup/admin' do
+  # params - email, pass
+  # create
 end
 
 get '/onetimesetup/other' do
@@ -24,6 +26,7 @@ puts "=============================================="
 puts " Stripes v#{$STRIPES_VERSION} has been setup - #{stamp.strftime("%b. %d, %Y")}"
 puts "=============================================="
 $STRIPES_INSTALLED = true
+$transaction_context = "stars-#{stamp.strftime('%Y-%m-%d-%H-%M-%S')}"
 # PUTS SETTINGS IN PLACE FOR THIS INSTANCE OF THE APPLICATION
   INSTALLED
   File.open(local_filename, 'w') {|f| f.write(doc) }
