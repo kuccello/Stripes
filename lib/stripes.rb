@@ -8,11 +8,11 @@ require File.join(File.dirname(__FILE__), "stripes/model/app-init" )
 require 'rack-flash'
 
 $STRIPES_VERSION = "0.1"
+$transaction_context = 'stars-default'
 
 use Rack::Session::Pool, :expire_after => 60 * 30 #60 * 60 * 24 * 365
 use Rack::Flash
 
-#$transaction_context = 'stars'
 set :views, File.dirname(__FILE__) + '/stripes/views'
 set :public, File.dirname(__FILE__) + '/stripes/public'
 

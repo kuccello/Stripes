@@ -10,10 +10,8 @@ end
 
 post '/onetimesetup/admin' do
   # params - email, pass
-  # create
-end
-
-get '/onetimesetup/other' do
+  session[:setup] = {:admin=>{:email=>params[:email], :pass=>params[:pass]}}
+  redirect '/onetimesetup/finish'  
 end
 
 get '/onetimesetup/finish' do
@@ -32,6 +30,9 @@ $transaction_context = "stars-#{stamp.strftime('%Y-%m-%d-%H-%M-%S')}"
   File.open(local_filename, 'w') {|f| f.write(doc) }
 
   require File.dirname(__FILE__)+"/installed"
+
+  email,password = session[:setup][:admin][:email], session[:setup][:admin][:pass]
+  App.create_default_administrator(email,password)
 
   haml :'onetimesetup/finish', :layout=>:'onetimesetup/layout'
 end

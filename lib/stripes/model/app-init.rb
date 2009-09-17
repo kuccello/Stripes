@@ -28,6 +28,36 @@ module App
       #it.setup_defaults
     end
   end
+
+  def App.transaction
+    result = nil
+    Xampl.transaction($transaction_context) do
+      result = yield
+    end
+    result
+  end
+
+=begin
+<member pid="email@example.com"
+          name="duh"
+          md5-password=""
+          token="">
+
+    <access id="editor|admin">
+      <site pid=""/>
+    </access>
+
+  </member>
+=end
+
+  def App.create_default_administrator(email,password)
+    App.transaction do
+      admin = App.root.new_member(email)
+      admin.password=password
+      admin.name = "Field Marshal"
+      admin.token = "ADMINISTRATOR-FIELD-MARSHAL"
+    end
+  end
 end
 
 require File.join(File.dirname(__FILE__), "member" )
