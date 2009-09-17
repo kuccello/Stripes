@@ -16,15 +16,19 @@
                     state="draft|published|hidden|deleted|locked"
                     content="maruku-markdown|html|text|ruby|stripes|haml|sass|css|js"><![CDATA[PAGE CONTENT HERE]]></page-version>
     </page>
+
+    <!-- maybe we can expand this to include blog posts? -->
   </site>
 
   <member pid="email@example.com"
           name="duh"
-          md5-password="">
+          md5-password=""
+          token="">
 
     <access id="editor|admin">
       <site pid=""/>
     </access>
+    
   </member>
 
 </stripes>

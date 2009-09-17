@@ -13,4 +13,4 @@ Required Gems:
 sudo gem install sinatra
 sudo gem install hutch-xamplr hutch-xamplr-pp
 sudo gem install haml
-sudo gem install maxjustus-sinatra-authentication
+sudo gem install nakajima-rack-flash

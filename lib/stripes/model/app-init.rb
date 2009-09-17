@@ -29,3 +29,7 @@ module App
     end
   end
 end
+
+require File.join(File.dirname(__FILE__), "member" )
+require File.join(File.dirname(__FILE__), "page" )
+require File.join(File.dirname(__FILE__), "site" )
