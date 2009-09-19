@@ -1,2 +1,179 @@
-%h1
-  Admin Lobby
+#main_panel_container.left
+  #dashboard
+    %h2.ico_mug
+      Dashboard
+    .clearfix
+      .left.quickview
+        %h3
+          Overview
+        %ul
+          %li
+            Total Posts:
+            %span.number
+              15
+          %li
+            Total Comments:
+            %span.number
+              340
+          %li
+            Drafts:
+            %span.number
+              3
+          %li
+            Things to do:
+            %span.number
+              3
+          %li
+            Comments waiting for aproval:
+            %span.number
+              20
+          %li
+            Visits Today:
+            %span.number
+              230
+      .quickview.left
+        %h3
+          Some data
+        %ul
+          %li
+            Users online:
+            %span.number
+              15
+          %li
+            Trafic increase:
+            %span.number
+              34%
+          %li
+            Photos:
+            %span.number
+              3
+          %li
+            Things to do:
+            %span.number
+              3
+          %li
+            Photos waiting for aproval:
+            %span.number
+              31
+          %li
+            Visits Today:
+            %span.number
+              230
+      #chart.left
+        %h3
+          Visits today
+        #placeholder
+        /
+          CHART
+        %a.ico_chart.more{ :href => "#" }
+          Click to see more
+  /
+    end #dashboard
+  #shortcuts.clearfix
+    %h2.ico_mug
+      Panel shortcuts
+    %ul
+      %li.first_li
+        %a{ :href => "" }
+          %img{ :src => "img/theme.jpg", :alt => "themes" }
+          %span
+            Themes
+      %li
+        %a{ :href => "" }
+          %img{ :src => "img/statistic.jpg", :alt => "statistics" }
+          %span
+            Statistics
+      %li
+        %a{ :href => "" }
+          %img{ :src => "img/ftp.jpg", :alt => "FTP" }
+          %span
+            FTP
+      %li
+        %a{ :href => "" }
+          %img{ :src => "img/users.jpg", :alt => "Users" }
+          %span
+            Users
+      %li
+        %a{ :href => "" }
+          %img{ :src => "img/comments.jpg", :alt => "Comments" }
+          %span
+            Comments
+      %li
+        %a{ :href => "" }
+          %img{ :src => "img/gallery.jpg", :alt => "Gallery" }
+          %span
+            Gallery
+      %li
+        %a{ :href => "" }
+          %img{ :src => "img/security.jpg", :alt => "Security" }
+          %span
+            Security
+  /
+    end #shortcuts
+#sidebar.right
+  %h2.ico_mug
+    Sidebar
+  %ul#menu
+    %li
+      %a.ico_posts{ :href => "#" }
+        Posts
+      %ul
+        %li
+          %a{ :href => "#" }
+            Edit posts
+        %li
+          %a{ :href => "#" }
+            Add post
+        %li
+          %a{ :href => "#" }
+            Manage posts
+      %a.ico_page{ :href => "#" }
+        Pages
+      %ul
+        %li
+          %a{ :href => "#" }
+            Edit pages
+        %li
+          %a{ :href => "#" }
+            Add page
+        %li
+          %a{ :href => "#" }
+            Manage pages
+      %a.ico_user{ :href => "#" }
+        Users
+      %ul
+        %li
+          %a{ :href => "#" }
+            Edit users
+        %li
+          %a{ :href => "#" }
+            Add user
+        %li
+          %a{ :href => "#" }
+            Manage users
+      %a.ico_settings{ :href => "#" }
+        Settings
+      %ul
+        %li
+          %a{ :href => "#" }
+            Database
+        %li
+          %a{ :href => "#" }
+            Themes
+        %li
+          %a{ :href => "#" }
+            Options
+      %a.ico_settings{ :href => "#" }
+        Settings
+      %ul
+        %li
+          %a{ :href => "#" }
+            Database
+        %li
+          %a{ :href => "#" }
+            Themes
+        %li
+          %a{ :href => "#" }
+            Options
+/
+  end #sidebar

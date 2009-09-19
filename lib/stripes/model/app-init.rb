@@ -37,19 +37,6 @@ module App
     result
   end
 
-=begin
-<member pid="email@example.com"
-          name="duh"
-          md5-password=""
-          token="">
-
-    <access id="editor|admin">
-      <site pid=""/>
-    </access>
-
-  </member>
-=end
-
   def App.create_default_administrator(email,password)
     App.transaction do
       admin = App.root.new_member(email)

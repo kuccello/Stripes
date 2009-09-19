@@ -1,0 +1,34 @@
+#login_container
+  #header
+    #logo
+      %h1
+        %a{ :href => "/" }
+          AdmintTheme
+  /
+    end header
+  #login.section
+    - if flash[:error] then
+      #fail.info_div
+        %span.ico_cancel
+          = flash[:error]
+
+    %form#loginform{ :name => "loginform", :method=>"post",:action=>"/login" }
+      %label
+        %strong
+          Email
+      %input#user_login.input{ :type => "text", :name => "email", :size => "28" }
+      %br
+      %label
+        %strong
+          Password
+      %input#user_pass.input{ :type => "text", :name => "pass", :size => "28" }
+      %br
+      %strong
+        Remember Me
+      %input#remember.input.noborder{ :type => "checkbox" }
+      %br
+      %input#save.submit{ :type => "submit", :value => "Log In" }
+    %a#passwordrecoverylink{ :href => "#" }
+      Forgot your username or password?
+/
+  end container

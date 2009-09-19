@@ -1,10 +1,83 @@
 !!!
-%html
+%html{ :xmlns => "http://www.w3.org/1999/xhtml" }
   %head
+    %meta{ "http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
     %title
-      ADMIN
+      Stripes Administration - Military Grade CMS
+    %meta{ :name => "description", :content => "" }
+    %meta{ :name => "keywords", :content => "" }
+    %meta{ :name => "robots", :content => "index,follow" }
+    %link{ :rel => "stylesheet", :type => "text/css", :media => "all", :href => "/css/style.css" }
+    %link{ :rel => "Stylesheet", :type => "text/css", :href => "/css/smoothness/jquery-ui-1.7.1.custom.css" }
+    /
+      [if IE 7]><link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen, projection" /><![endif]
+    /
+      [if IE 6]><link rel="stylesheet" href="/css/ie6.css" type="text/css" media="screen, projection" /><![endif]
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "/markitup/skins/markitup/style.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "/markitup/sets/default/style.css" }
+
+    /
+      [if IE]>
+      <style type="text/css">
+      \.clearfix {
+      zoom: 1;     /* triggers hasLayout */
+      display: block;     /* resets display for IE/Win */
+      }  /* Only IE can see inside the conditional comment
+      and read this CSS rule. Don't ever use a normal HTML
+      comment inside the CC or it will close prematurely. */
+      </style>
+      <![endif]
+    /
+      JavaScript
+    %script{ :type => "text/javascript", :src => "/js/jquery-1.3.2.min.js" }
+    %script{ :type => "text/javascript", :src => "/js/jquery-ui-1.7.1.custom.min.js" }
+    %script{ :type => "text/javascript", :src => "/js/excanvas.pack.js" }
+    %script{ :type => "text/javascript", :src => "/js/jquery.flot.pack.js" }
+    %script{ :type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"}
+    %script{ :type => "text/javascript", :src => "/markitup/jquery.markitup.pack.js" }
+    %script{ :type => "text/javascript", :src => "/markitup/sets/default/set.js" }
+    %script{ :type => "text/javascript", :src => "/js/custom.js" }
+    
+    /
+      [if IE]><script language="javascript" type="text/javascript" src="excanvas.pack.js"></script><![endif]
   %body
-    #flash.error
-      - if flash[:error] then
-        = flash[:error]
-    = yield
+    #container.container
+      #header
+        #profile_info
+          %img#avatar{ :src => "img/avatar.jpg", :alt => "avatar" }
+          %p
+            %strong
+              = session[:user].name
+            \.
+            %a{ :href => "/logout" }
+              Log out?
+          %p.last_login
+            Last login: 21:03 12.05.2009
+          %p
+            Last IP: 127.0.0.1
+        #logo
+          %h1
+            %a{ :href => "/admin" }
+              Stripes
+      /
+        end header
+      #content
+        #top_menu.clearfix
+          %ul
+            %li
+              %a
+                = context_label||"#{'THIS IS WHERE I WILL PUT UP THE CONTEXT LABEL'}"
+        #content_main.clearfix
+          = yield
+        /
+          end #content_main
+
+        #footer.clearfix
+          %p.left
+            Stripes Administration - Military Grade CMS
+          %p.right
+            &copy; 2009 Soldier Of Code
+        /
+          end #footer
+      /
+        end container

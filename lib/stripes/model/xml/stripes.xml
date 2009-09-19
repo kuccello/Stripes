@@ -23,7 +23,9 @@
   <member pid="email@example.com"
           name="duh"
           md5-password=""
-          token="">
+          token=""
+          last-login=""
+          last-ip="">
 
     <access id="editor|admin">
       <site pid=""/>

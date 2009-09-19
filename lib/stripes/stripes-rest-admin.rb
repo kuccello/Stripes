@@ -1,7 +1,8 @@
 get '/admin' do
   login_required
   #redirect "/users" unless current_user.admin? || current_user == params[:id]
-  haml :'admin/lobby',:layout=>:'admin/layout'
+  haml :'admin/lobby',:layout=>:'admin/layout',:locals=>{:context_label=>"Lobby"}
+  #haml :'admin/index',:layout=>false
 end
 
 get '/admin/users/:id/edit' do

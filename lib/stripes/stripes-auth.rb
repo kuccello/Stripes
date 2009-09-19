@@ -1,7 +1,7 @@
 
 # deliver the login page
 get '/login' do
-  haml :"common/login-form", :layout=>:'admin/layout'
+  haml :"admin/login", :layout=>:'admin/layout-simple'
 end
 
 # process the login attempt

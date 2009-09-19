@@ -1,0 +1,706 @@
+!!!
+%html{ :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{ "http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
+    %title
+      Stripes Administration - Military Grade CMS
+    %meta{ :name => "description", :content => "" }
+    %meta{ :name => "keywords", :content => "" }
+    %meta{ :name => "robots", :content => "index,follow" }
+    %link{ :rel => "stylesheet", :type => "text/css", :media => "all", :href => "/css/style.css" }
+    %link{ :rel => "Stylesheet", :type => "text/css", :href => "/css/smoothness/jquery-ui-1.7.1.custom.css" }
+    /
+      [if IE 7]><link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen, projection" /><![endif]
+    /
+      [if IE 6]><link rel="stylesheet" href="/css/ie6.css" type="text/css" media="screen, projection" /><![endif]
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "/markitup/skins/markitup/style.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "/markitup/sets/default/style.css" }
+    /
+      [if IE]>
+      <style type="text/css">
+      \.clearfix {
+      zoom: 1;     /* triggers hasLayout */
+      display: block;     /* resets display for IE/Win */
+      }  /* Only IE can see inside the conditional comment
+      and read this CSS rule. Don't ever use a normal HTML
+      comment inside the CC or it will close prematurely. */
+      </style>
+      <![endif]
+    /
+      JavaScript
+    %script{ :type => "text/javascript", :src => "/js/jquery-1.3.2.min.js" }
+    %script{ :type => "text/javascript", :src => "/js/jquery-ui-1.7.1.custom.min.js" }
+    %script{ :type => "text/javascript", :src => "/js/excanvas.pack.js" }
+    %script{ :type => "text/javascript", :src => "/js/jquery.flot.pack.js" }
+    %script{ :type => "text/javascript", :src => "/markitup/jquery.markitup.pack.js" }
+    %script{ :type => "text/javascript", :src => "/markitup/sets/default/set.js" }
+    %script{ :type => "text/javascript", :src => "/js/custom.js" }
+    /
+      [if IE]><script language="javascript" type="text/javascript" src="excanvas.pack.js"></script><![endif]
+  %body
+    #container.container
+      #header
+        #profile_info
+          %img#avatar{ :src => "img/avatar.jpg", :alt => "avatar" }
+          %p
+            Welcome
+            %strong
+              rzepak
+            \.
+            %a{ :href => "#" }
+              Log out?
+          %p
+            System messages: 3.
+            %a{ :href => "#" }
+              Read?
+          %p.last_login
+            Last login: 21:03 12.05.2009
+        #logo
+          %h1
+            %a{ :href => "/" }
+              AdmintTheme
+      /
+        end header
+      #content
+        #top_menu.clearfix
+          %ul
+            %li
+              %a{ :href => "#" }
+                Settings
+            %li
+              %a{ :href => "#" }
+                Menu options
+            %li
+              %a{ :href => "#" }
+                Editor
+            %li
+              %a{ :href => "#" }
+                Some other
+          %a#visit.right{ :href => "#" }
+            Visit site
+        #content_main.clearfix
+          #main_panel_container.left
+            #dashboard
+              %h2.ico_mug
+                Dashboard
+              .clearfix
+                .left.quickview
+                  %h3
+                    Overview
+                  %ul
+                    %li
+                      Total Posts:
+                      %span.number
+                        15
+                    %li
+                      Total Comments:
+                      %span.number
+                        340
+                    %li
+                      Drafts:
+                      %span.number
+                        3
+                    %li
+                      Things to do:
+                      %span.number
+                        3
+                    %li
+                      Comments waiting for aproval:
+                      %span.number
+                        20
+                    %li
+                      Visits Today:
+                      %span.number
+                        230
+                .quickview.left
+                  %h3
+                    Some data
+                  %ul
+                    %li
+                      Users online:
+                      %span.number
+                        15
+                    %li
+                      Trafic increase:
+                      %span.number
+                        34%
+                    %li
+                      Photos:
+                      %span.number
+                        3
+                    %li
+                      Things to do:
+                      %span.number
+                        3
+                    %li
+                      Photos waiting for aproval:
+                      %span.number
+                        31
+                    %li
+                      Visits Today:
+                      %span.number
+                        230
+                #chart.left
+                  %h3
+                    Visits today
+                  #placeholder
+                  /
+                    CHART
+                  %a.ico_chart.more{ :href => "#" }
+                    Click to see more
+            /
+              end #dashboard
+            #shortcuts.clearfix
+              %h2.ico_mug
+                Panel shortcuts
+              %ul
+                %li.first_li
+                  %a{ :href => "" }
+                    %img{ :src => "img/theme.jpg", :alt => "themes" }
+                    %span
+                      Themes
+                %li
+                  %a{ :href => "" }
+                    %img{ :src => "img/statistic.jpg", :alt => "statistics" }
+                    %span
+                      Statistics
+                %li
+                  %a{ :href => "" }
+                    %img{ :src => "img/ftp.jpg", :alt => "FTP" }
+                    %span
+                      FTP
+                %li
+                  %a{ :href => "" }
+                    %img{ :src => "img/users.jpg", :alt => "Users" }
+                    %span
+                      Users
+                %li
+                  %a{ :href => "" }
+                    %img{ :src => "img/comments.jpg", :alt => "Comments" }
+                    %span
+                      Comments
+                %li
+                  %a{ :href => "" }
+                    %img{ :src => "img/gallery.jpg", :alt => "Gallery" }
+                    %span
+                      Gallery
+                %li
+                  %a{ :href => "" }
+                    %img{ :src => "img/security.jpg", :alt => "Security" }
+                    %span
+                      Security
+            /
+              end #shortcuts
+          #sidebar.right
+            %h2.ico_mug
+              Sidebar
+            %ul#menu
+              %li
+                %a.ico_posts{ :href => "#" }
+                  Posts
+                %ul
+                  %li
+                    %a{ :href => "#" }
+                      Edit posts
+                  %li
+                    %a{ :href => "#" }
+                      Add post
+                  %li
+                    %a{ :href => "#" }
+                      Manage posts
+                %a.ico_page{ :href => "#" }
+                  Pages
+                %ul
+                  %li
+                    %a{ :href => "#" }
+                      Edit pages
+                  %li
+                    %a{ :href => "#" }
+                      Add page
+                  %li
+                    %a{ :href => "#" }
+                      Manage pages
+                %a.ico_user{ :href => "#" }
+                  Users
+                %ul
+                  %li
+                    %a{ :href => "#" }
+                      Edit users
+                  %li
+                    %a{ :href => "#" }
+                      Add user
+                  %li
+                    %a{ :href => "#" }
+                      Manage users
+                %a.ico_settings{ :href => "#" }
+                  Settings
+                %ul
+                  %li
+                    %a{ :href => "#" }
+                      Database
+                  %li
+                    %a{ :href => "#" }
+                      Themes
+                  %li
+                    %a{ :href => "#" }
+                      Options
+                %a.ico_settings{ :href => "#" }
+                  Settings
+                %ul
+                  %li
+                    %a{ :href => "#" }
+                      Database
+                  %li
+                    %a{ :href => "#" }
+                      Themes
+                  %li
+                    %a{ :href => "#" }
+                      Options
+          /
+            end #sidebar
+        /
+          end #content_main
+        #postedit.clearfix
+          %h2.ico_mug
+            Add new post
+          %form{ :action => "post" }
+            %div
+              %input#post_title{ :type => "text", :size => "30", :tabindex => "1", :value => "Type title" }
+            #form_middle_cont.clearfix
+              .left
+                %textarea#markItUp{ :cols => "80", :rows => "10" }
+              .left.form_sidebar
+                %h3
+                  Category:
+                %ul
+                  %li
+                    %label
+                      %input.noborder{ :type => "checkbox", :name => "chbox" }
+                      First category
+                  %li
+                    %label
+                      %input.noborder{ :type => "checkbox", :name => "chbox" }
+                      Second category
+                  %li
+                    %label
+                      %input.noborder{ :type => "checkbox", :name => "chbox" }
+                      Third category
+                %h3
+                  Tags,
+                %input{ :type => "text", :value => "Short", :tabindex => "2" }
+                %p
+                  %span#status
+                    Status: Automated saving...
+                  %input{ :type => "submit", :value => "Preview" }
+                  %input#save{ :type => "submit", :value => "Save" }
+          #success.info_div
+            %span.ico_success
+              Yeah! Success!
+          #fail.info_div
+            %span.ico_cancel
+              Ups, there was an error
+          #warning.info_div
+            %span.ico_error
+              Ups, you miss something
+        /
+          end #postedit
+        #tabledata.section
+          %h2.ico_mug
+            Table data
+          %table#table
+            %thead
+              %tr
+                %th
+                  %input.noborder{ :type => "checkbox" }
+                %th
+                  Date
+                %th
+                  Title
+                %th
+                  Category
+                %th
+                  Actions
+                %th
+                  Status
+            %tbody
+              %tr
+                %td.table_check
+                  %input.noborder{ :type => "checkbox" }
+                %td.table_date
+                  April 23, 2009
+                %td.table_title
+                  %a{ :href => "#" }
+                    Something like post
+                %td
+                  %a{ :href => "#" }
+                    Webdesign, Life, Custom
+                %td
+                  %a{ :href => "#" }
+                    %img{ :src => "img/accept.jpg", :alt => "accepted" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/cancel.jpg", :alt => "cancel" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/folder.jpg", :alt => "folder" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/edit.jpg", :alt => "edit" }
+                %td
+                  %span.approved
+                    Approved
+              %tr
+                %td.table_check
+                  %input.noborder{ :type => "checkbox" }
+                %td.table_date
+                  April 22, 2009
+                %td.table_title
+                  %a{ :href => "#" }
+                    Another thing
+                %td
+                  %a{ :href => "#" }
+                    Webdesign, Life, Custom
+                %td
+                  %a{ :href => "#" }
+                    %img{ :src => "img/accept.jpg", :alt => "accepted" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/cancel.jpg", :alt => "cancel" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/folder.jpg", :alt => "folder" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/edit.jpg", :alt => "edit" }
+                %td
+                  %span.approved
+                    Approved
+              %tr
+                %td.table_check
+                  %input.noborder{ :type => "checkbox" }
+                %td.table_date
+                  April 21, 2009
+                %td.table_title
+                  %a{ :href => "#" }
+                    And this is also a post
+                %td
+                  %a{ :href => "#" }
+                    Webdesign, Life, Custom
+                %td
+                  %a{ :href => "#" }
+                    %img{ :src => "img/accept.jpg", :alt => "accepted" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/cancel.jpg", :alt => "cancel" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/folder.jpg", :alt => "folder" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/edit.jpg", :alt => "edit" }
+                %td
+                  %span.ico_pending
+                    Pending
+              %tr
+                %td.table_check
+                  %input.noborder{ :type => "checkbox" }
+                %td.table_date
+                  April 21, 2009
+                %td.table_title
+                  %a{ :href => "#" }
+                    And this is also a post
+                %td
+                  %a{ :href => "#" }
+                    Webdesign, Life, Custom
+                %td
+                  %a{ :href => "#" }
+                    %img{ :src => "img/accept.jpg", :alt => "accepted" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/cancel.jpg", :alt => "cancel" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/folder.jpg", :alt => "folder" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/edit.jpg", :alt => "edit" }
+                %td
+                  %span.ico_pending
+                    Pending
+              %tr
+                %td.table_check
+                  %input.noborder{ :type => "checkbox" }
+                %td.table_date
+                  April 21, 2009
+                %td.table_title
+                  %a{ :href => "#" }
+                    And this is also a post
+                %td
+                  %a{ :href => "#" }
+                    Webdesign, Life, Custom
+                %td
+                  %a{ :href => "#" }
+                    %img{ :src => "img/accept.jpg", :alt => "accepted" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/cancel.jpg", :alt => "cancel" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/folder.jpg", :alt => "folder" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/edit.jpg", :alt => "edit" }
+                %td
+                  %span.ico_pending
+                    Pending
+              %tr
+                %td.table_check
+                  %input.noborder{ :type => "checkbox" }
+                %td.table_date
+                  April 21, 2009
+                %td.table_title
+                  %a{ :href => "#" }
+                    And this is also a post
+                %td
+                  %a{ :href => "#" }
+                    Webdesign, Life, Custom
+                %td
+                  %a{ :href => "#" }
+                    %img{ :src => "img/accept.jpg", :alt => "accepted" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/cancel.jpg", :alt => "cancel" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/folder.jpg", :alt => "folder" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/edit.jpg", :alt => "edit" }
+                %td
+                  %span.ico_pending
+                    Pending
+          #table_options.clearfix
+            %ul
+              %li
+                %a{ :href => "#" }
+                  Select All
+              %li
+                %a{ :href => "#" }
+                  Select None
+              %li
+                %label
+                  Action:
+                  %select#kategoria{ :name => "kategoria" }
+                    %option{ :value => "1" }
+                      Option 1
+                    %option{ :value => "2" }
+                      Option 2
+                    %option{ :value => "3" }
+                      Option 3
+                    %option{ :value => "4" }
+                      Option 4
+          .pagination
+            %span.pages
+              Page 1 of 3
+            %span.current
+              1
+            %a{ :href => "#", :title => "2" }
+              2
+            %a{ :href => "#", :title => "3" }
+              3
+            %a{ :href => "#" }
+              \&raquo;
+        /
+          end #tabledata
+        .section
+          %h1
+            Header h1
+          %h2
+            Header h2
+          %h3
+            Header h3
+          %h4
+            Header h4
+          %h5
+            Header h5
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            %a{ :href => "#" }
+              Nam sapien dolor
+            , ultrices a rutrum quis, convallis nec nisi.
+            %del
+              Morbi lorem est
+            , pellentesque ac suscipit ut, fringilla sit amet elit. Cras blandit turpis vitae augue laoreet gravida. Suspendisse potenti. Nullam vitae dui quam. Cras fringilla tincidunt metus venenatis suscipit. Vestibulum feugiat felis tincidunt felis fermentum fringilla. In a ante metus. Nullam consequat hendrerit orci quis volutpat. Etiam a libero nunc. Sed convallis suscipit lectus quis hendrerit. Aliquam et elementum risus. Proin at feugiat lacus. Suspendisse non odio ante, et porta turpis. Integer bibendum augue at nisi porta vel luctus nisl fringilla. Donec in libero erat.
+          %ul
+            %li
+              Element of unordered list
+            %li
+              Element of unordered list
+            %li
+              Element of unordered list
+          %ol
+            %li
+              Element of ordered list
+            %li
+              Element of ordered list
+            %li
+              Element of ordered list
+          %p.info
+            Info paragraph. That's
+            %em
+              em
+            and here is
+            %strong
+              strong
+            \. And some
+            %small
+              small text
+          %hr
+          %form{ :action => "post", :method => "post", "accept-charset" => "utf-8" }
+            %fieldset
+              %legend
+                %span
+                  Internet Browsers
+              %input.noborder{ :type => "radio", :name => "browser" }
+              Internet Explorer
+              %br
+              %input.noborder{ :type => "radio", :name => "browser" }
+              Netscape Navigator
+              %br
+              %input.noborder{ :type => "radio", :name => "browser" }
+              Opera
+              %br
+              %br
+              %label
+                %input{ :type => "text", :value => "Short" }
+              %label
+                %input{ :type => "text", :value => "Medium", :size => "60" }
+              %label
+                %input{ :type => "text", :value => "Long", :size => "90" }
+              %br
+              %input{ :type => "submit", :value => "Continue" }
+              %br
+              %button
+                This is a button
+          #tabs
+            %ul
+              %li
+                %a{ :href => "#tabs-1" }
+                  First
+              %li
+                %a{ :href => "#tabs-2" }
+                  Second
+              %li
+                %a{ :href => "#tabs-3" }
+                  Third
+            #tabs-1
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            #tabs-2
+              Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.
+            #tabs-3
+              Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.
+        /
+          end #section
+        #panels.clearfix
+          .panel.photo.left
+            %h2.ico_mug
+              Photo gallery
+            %ul.clearfix
+              %li
+                %img{ :src => "photos/1.jpg", :alt => "photo" }
+                %span
+                  %a{ :href => "#" }
+                    %img{ :src => "img/accept.jpg", :alt => "accept" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/cancel.jpg", :alt => "deny" }
+              %li
+                %img{ :src => "photos/2.jpg", :alt => "photo" }
+                %span
+                  %a{ :href => "#" }
+                    %img{ :src => "img/accept.jpg", :alt => "accept" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/cancel.jpg", :alt => "deny" }
+              %li
+                %img{ :src => "photos/3.jpg", :alt => "photo" }
+                %span
+                  %a{ :href => "#" }
+                    %img{ :src => "img/accept.jpg", :alt => "accept" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/cancel.jpg", :alt => "deny" }
+              %li
+                %img{ :src => "photos/2.jpg", :alt => "photo" }
+                %span
+                  %a{ :href => "#" }
+                    %img{ :src => "img/accept.jpg", :alt => "accept" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/cancel.jpg", :alt => "deny" }
+              %li
+                %img{ :src => "photos/1.jpg", :alt => "photo" }
+                %span
+                  %a{ :href => "#" }
+                    %img{ :src => "img/accept.jpg", :alt => "accept" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/cancel.jpg", :alt => "deny" }
+              %li
+                %img{ :src => "photos/2.jpg", :alt => "photo" }
+                %span
+                  %a{ :href => "#" }
+                    %img{ :src => "img/accept.jpg", :alt => "accept" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/cancel.jpg", :alt => "deny" }
+              %li
+                %img{ :src => "photos/1.jpg", :alt => "photo" }
+                %span
+                  %a{ :href => "#" }
+                    %img{ :src => "img/accept.jpg", :alt => "accept" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/cancel.jpg", :alt => "deny" }
+              %li
+                %img{ :src => "photos/3.jpg", :alt => "photo" }
+                %span
+                  %a{ :href => "#" }
+                    %img{ :src => "img/accept.jpg", :alt => "accept" }
+                  %a{ :href => "#" }
+                    %img{ :src => "img/cancel.jpg", :alt => "deny" }
+            %button
+              Add photo
+          /
+            end #photo
+          .panel.todo.left
+            %h2.ico_mug
+              To do list
+            %p
+              Things to do:
+            %ul
+              %li.even
+                %input.noborder{ :type => "checkbox", :value => "", :name => "check" }
+                Create more theme fot themeforest
+                %span.date
+                  July 24, 2009
+              %li.odd
+                %input.noborder{ :type => "checkbox", :value => "", :name => "check" }
+                Sell a looot fo themes
+                %span.date
+                  July 24, 2009
+              %li.even
+                %input.noborder{ :type => "checkbox", :value => "", :name => "check" }
+                Learn ruby on rails
+                %span.date
+                  July 24, 2009
+              %li.odd
+                %input.noborder{ :type => "checkbox", :value => "", :name => "check" }
+                Be a better man
+                %span.date
+                  July 24, 2009
+            %button
+              Add to do
+          /
+            end #todo
+          .panel.calendar.left
+            %h2.ico_mug
+              Callendar
+            #datepicker
+            %button
+              Add event
+          /
+            end #calendar
+        /
+          end #panels
+        #dialog{ :title => "Welcome" }
+          %p
+            Thank you for stopping by :) Hope you like that theme.
+        /
+          end #dialog [if you don't want this, delete whole div and 6th line i custom.js
+      /
+        end #content
+      #footer.clearfix
+        %p.left
+          AdminTheme - Ultimate Admin Panel Solution
+        %p.right
+          © 2009 AdminTheme by rzepak, via Themeforest
+      /
+        end #footer
+    /
+      end container
