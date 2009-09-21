@@ -67,6 +67,22 @@
             %li
               %a
                 = context_label||"#{'THIS IS WHERE I WILL PUT UP THE CONTEXT LABEL'}"
+
+        - if flash[:success] then
+          #success.info_div
+            %span.ico_success
+              = flash[:success]
+
+        - if flash[:error] then
+          #fail.info_div
+            %span.ico_cancel
+              = flash[:error]
+
+        - if flash[:warn] then
+          #warning.info_div
+            %span.ico_error
+              = flash[:warn]
+
         #content_main.clearfix
           = yield
         /

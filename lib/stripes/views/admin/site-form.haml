@@ -1,0 +1,29 @@
+#main_panel_container.left
+  #dashboard
+    %h2.ico_world
+      New Site:
+    .clearfix
+      .left.quickview
+        %form{:action=>"/admin/site/new",:method=>"post"}
+          %ul
+            %li
+              %label{:for=>"domain"}
+                Domain Name:
+              %input{:type=>"text",:name=>"domain"}
+            %li
+              %label{:for=>"name"}
+                Name:
+              %input{:type=>"text",:name=>"Name"}
+            %li
+              %label{:for=>"title"}
+                Title:
+              %input{:type=>"text",:name=>"title"}
+            %li
+              %input{:type=>"submit",:value=>"Create Site"}
+              %input{:type=>"submit",:value=>"Cancel"} 
+
+  /
+    end #dashboard
+
+= haml :'admin/sidebar', :layout=>false
+

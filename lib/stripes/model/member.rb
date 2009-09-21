@@ -12,6 +12,18 @@ module App
       true
     end
 
+    def site_list
+      sites = []
+      App.transaction do
+        self.access.each do |dd|
+          dd.site.each do |site|
+            sites << site
+          end
+        end
+      end
+      sites
+    end
+
 
     def self.authenticate(email, pass)
       current_user = Member.find_by_email(email)

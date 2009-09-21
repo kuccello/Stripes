@@ -125,6 +125,8 @@ ICONS				 */
 .ico_error{padding-left:20px;background:url(../img/ico_error.jpg) no-repeat left center}
 .ico_pending{padding-left:20px;background:url(../img/ico_hourglass.jpg) no-repeat left center}
 .ico_chart{padding-left:20px;background:url(../img/ico_chart_bar.jpg) no-repeat left center}
+.ico_world{padding-left:20px;background:url(../img/world.png) no-repeat left center}
+.ico_building{padding-left:20px;background:url(../img/building.png) no-repeat left center}
 /* ------------------------------------------------------------------------------------
 LOGO				 */
 div#logo h1{padding:0px;margin:0px;}
