@@ -1,0 +1,41 @@
+%script{ :type => "text/javascript", :src => "/jqueryFileTree/jqueryFileTree.js" }
+%link{ :rel => "stylesheet", :type => "text/css", :href => "/jqueryFileTree/jqueryFileTree.css" }
+
+/
+  %script{ :type => "text/javascript", :src => "/js/site-file-struct.js"}
+%script{ :type => "text/javascript"}
+  = "var site_pid = '#{site.pid}';"
+%script{ :type => "text/javascript"}
+  $(document).ready( function() {
+  $('#file_structure').fileTree({
+  root: '/',
+  script: '/admin/site/krispy.com/file_struct',
+  expandSpeed: 1000,
+  collapseSpeed: 1000,
+  multiFolder: false
+  }, function(file) {
+  alert(file);
+  });
+  });
+
+#main_panel_container.left
+  %h2#site_name
+    = site.name
+  %h3#site_domain
+    = site.pid
+  #site_container
+    #file_structure
+
+    %ul
+      %li
+        %a{:href=>"#"}
+          Add Page
+      %li
+        %a{:href=>"#"}
+          Add Directory
+
+      %li
+        %a{:href=>"#"}
+          Add Resource
+
+= haml :'admin/sidebar', :layout=>false

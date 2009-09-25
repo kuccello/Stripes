@@ -21,26 +21,42 @@
         Pages
       %ul
         %li
-          %a{ :href => "#" }
-            Edit pages
+          %a{ :href => "/admin/pages" }
+            List pages
         %li
           %a{ :href => "#" }
             Add page
+
+      %a.ico_page{ :href => "#" }
+        Snippets
+      %ul
+        %li
+          %a{ :href => "/admin/snippets" }
+            List snippets
         %li
           %a{ :href => "#" }
-            Manage pages
+            Add snippet
+
+      %a.ico_user{ :href => "#" }
+        Resources
+      %ul
+        %li
+          %a{ :href => "#" }
+            List resources
+        %li
+          %a{ :href => "#" }
+            Add resource
+
       %a.ico_user{ :href => "#" }
         Users
       %ul
         %li
           %a{ :href => "#" }
-            Edit users
+            List users
         %li
           %a{ :href => "#" }
             Add user
-        %li
-          %a{ :href => "#" }
-            Manage users
+
       %a.ico_settings{ :href => "#" }
         Settings
       %ul
@@ -53,17 +69,6 @@
         %li
           %a{ :href => "#" }
             Options
-      %a.ico_settings{ :href => "#" }
-        Settings
-      %ul
-        %li
-          %a{ :href => "#" }
-            Database
-        %li
-          %a{ :href => "#" }
-            Themes
-        %li
-          %a{ :href => "#" }
-            Options
+      
 /
   end #sidebar

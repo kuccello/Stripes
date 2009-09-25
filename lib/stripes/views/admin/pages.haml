@@ -1,0 +1,46 @@
+
+#main_panel_container.left
+  #dashboard
+    %h2.ico_page
+      = "Pages (#{pages.size})"
+    #tabledata.section
+      %table#table{:width=>"499px"}
+        %thead
+          %tr
+            %th
+              Site
+            %th
+              Name
+            %th
+              Path
+            %th
+              Format
+            %th
+              Status
+        %tbody
+        - pages.each do |page|
+          %tr.page_list_item
+            %td
+              = page.site
+            %td
+              = page.page_version.last.name
+            %td
+              = page.id
+            %td
+              = page.page_version.last.format
+            %td
+              = page.status
+        - dirs.each do |dir|
+          %tr.directory_list_item
+            %td
+              = dir.name
+            %td
+              = dir.id
+            %td
+              n/a
+            %td
+              n/a
+  /
+    end #dashboard
+
+= haml :'admin/sidebar', :layout=>false

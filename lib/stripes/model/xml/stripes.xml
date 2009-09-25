@@ -2,11 +2,14 @@
 
   <site pid="developer.openapps.com"
         name="OPENapps Developer Documentation Site"
-        title="OPENapps Dev">
+        title="OPENapps Dev"
+        status="live|draft|pending"
+        landing-page="id of page to use as default">
 
     <page id="urisafe-page-id/with/possible/slash/seperators"
           state="draft|published|hidden|deleted"
-          date-created="">
+          date-created=""
+          site="the site pid">
 
       <page-version id="version number"
                     date-created=""
@@ -14,11 +17,45 @@
                     name="The name of the page as it will appear in the admin"
                     title="The page title"
                     state="draft|published|hidden|deleted|locked"
-                    content="maruku-markdown|html|text|ruby|stripes|haml|sass|css|js"><![CDATA[PAGE CONTENT HERE]]></page-version>
+                    format="maruku-markdown|html|text|ruby|stripes|haml|sass|css|js"><![CDATA[PAGE CONTENT HERE]]></page-version>
     </page>
+
+
+
+    <directory id="uridafe-page-id/with/possible/slash/seperators"
+               landing-page="id of page to use as landing page for directory"
+               name="">
+      <directory id=""/>
+      <page id=""/>
+    </directory>
 
     <!-- maybe we can expand this to include blog posts? -->
   </site>
+
+
+  <snippet-set pid=""
+               name="">
+
+    <snippet id=""
+             name=""
+             state=""
+             date-created=""
+             kind="markdown|html|text|ruby|stripes|haml|sass|css|js"><![CDATA[SNIPPET CONTENT HERE]]></snippet>
+
+  </snippet-set>
+
+  <resource-set pid=""
+                name="">
+
+    <resource id=""
+              name=""
+              kind="image|pdf|txt|src"
+              mime=""
+              date-created=""
+              uri-location=""/>
+
+  </resource-set>
+
 
   <member pid="email@example.com"
           name="duh"
@@ -29,6 +66,8 @@
 
     <access id="editor|admin">
       <site pid=""/>
+      <snippet-set pid=""/>
+      <resource-set pid=""/>
     </access>
     
   </member>

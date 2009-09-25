@@ -50,3 +50,7 @@ end
 require File.join(File.dirname(__FILE__), "member" )
 require File.join(File.dirname(__FILE__), "page" )
 require File.join(File.dirname(__FILE__), "site" )
+require File.join(File.dirname(__FILE__), "directory" )
+require File.join(File.dirname(__FILE__), "resource-set" )
+require File.join(File.dirname(__FILE__), "snippet-set" ) 
+

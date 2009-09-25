@@ -3,6 +3,31 @@ require File.join(File.dirname(__FILE__), "/generated_model/App" )
 module App
   class Member
 
+    def all_pages
+
+      container = []
+
+      App.transaction do
+
+        self.access.each do |access|
+
+          access.site.each do |site|
+
+            site.page.each do |page|
+
+              container << page
+
+            end
+
+          end
+          
+        end
+
+      end
+
+      container
+    end
+
     def password=(pass)
       self.md5_password = Member.encrypt(pass+self.pid)
     end

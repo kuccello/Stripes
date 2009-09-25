@@ -2,7 +2,7 @@
   #dashboard
     %h2.ico_world
       = "Sites (#{sites.size})"
-    #tabledata.section
+    #sites_table.section
       %table#table{:width=>"499px"}
         %thead
           %tr
@@ -11,17 +11,23 @@
             %th
               Domain
             %th
-              Title
+              Page Count
+            %th
+              Status
         %tbody
         - sites.each do |site|
-          %tr
+          %tr.site_row{:id=>"site|#{site.pid}"}
             %td
               = site.name
             %td
               = site.pid
             %td
-              = site.title
+              = site.page_count
+            %td
+              = site.status
   /
     end #dashboard
 
 = haml :'admin/sidebar', :layout=>false
+
+%script{ :type => "text/javascript", :src => "/js/site-list.js" }

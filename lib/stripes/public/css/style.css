@@ -193,6 +193,8 @@ input#post_title{width:925px;margin:0px;border-left:1px solid #a8a8a8;border-top
 #table .table_date{color:#5e5e5e;width:100px;font-weight:bold;}
 #table .table_check{width:20px;background:#eee;}
 #table .table_title a{color:#26608e;text-decoration:underline;font-weight:bold;}
+#table tr:hover{background:#00ff00;cursor:pointer;}
+
 
 #table_options{background:#fff;border:solid #c3c3c3;border-width:0px 1px 1px 1px;padding:5px;}
 #table_options label{margin:0px;padding-top:2px;}
